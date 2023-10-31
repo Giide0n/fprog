@@ -30,35 +30,39 @@ printPicture p = putStr (unlines p)
 
 -- a) Mirrors the given picture horizontally.
 flipH :: Picture -> Picture
-flipH = undefined
+flipH = map reverse
 
 -- b) Mirrors the given picture vertically.
 -- hint = "Wrqr Mrvyr zhff frcneng hztrxrueg jreqra."
 flipV :: Picture -> Picture
-flipV = undefined
+flipV = reverse
 
 -- c) Takes two pictures and puts the first above the second.
 -- hint = "Qnf fbyygra Fvr nhpu buar Uvysr uvaxevrtra."
 above :: Picture -> Picture -> Picture
-above = undefined
+above a b = a ++ b
 
 -- d) Takes two pictures and puts the first left of the second.
 -- hint = "Irejraqra Fvr qvr Shaxgvba mvcJvgu hz wr mjrv Mrvyra mh xbaxngravrera."
 beside :: Picture -> Picture -> Picture
-beside = undefined
+beside = zipWith (++)
 
 --------------------------------------------------------------------------------
 -- 2) Functions on Lists
 -- hint = "\65533oreyrtra Fvr fvpu mhrefg qvr Fvtanghe"
 --------------------------------------------------------------------------------
 -- a) Append an element at the end.
-
+appendToEnd :: [a] -> a -> [a]
+appendToEnd a b = a ++ [b]
 
 -- b) Reverse all but the first and the last element.
-
+reverseMiddle :: [a] -> [a]
+reverseMiddle (x:xs) = x : tail rs ++ [head rs]
+  where rs = reverse xs
 
 -- c) Insert an element at a given position.
-
+insertAt :: Int -> a -> [a] -> [a]
+insertAt i x xs = take i xs ++ [x] ++ drop i xs
 
 
 

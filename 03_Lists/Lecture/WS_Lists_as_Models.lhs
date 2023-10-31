@@ -15,17 +15,17 @@ Aktiennamen und deren Dollar Kurse.
 b.	Einkaufsliste
 Eine Liste der zu kaufenden Artikel jeweils mit der benötigten Anzahl.
 
-> -- b ::
-> b = undefined 
+> b :: [(String, Int)]
+> b = [("Brot", 2), ("Hackfleisch", 1), ("Eier", 5)] 
 
 c.	Stundenplan
 Für jeden Wochentag eine Abfolge der Module.
 
-> -- c ::
+> c :: [(String, [String])]
 > c = undefined
 
 d.	Videothek Datenbank
 Für jeden Kunden den Namen und alle ausgeliehenen Filme, jeweils mit der Information, ob der Film bereits wieder zurückgebracht wurde.
 
-> -- d ::
+> d :: [(String, [(String, Bool)])]
 > d = undefined
